@@ -13,14 +13,14 @@ export const Button = styled(BaseButton)<ButtonProps>(
     line-height: 1.5;
     background-color: ${theme.components?.Button?.backgroundColor};
     padding: 0;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: ${size === 'small' ? '16px' : '32px'};
+    padding-right: ${size === 'small' ? '16px' : '32px'};
     height: ${
       size === 'small'
         ? theme.components?.Button?.sizeSmall
         : theme.components?.Button?.sizeMedium
     };
-    border-radius: 9999px;
+    border-radius: ${theme.components?.Button?.borderRadius};
     color: ${theme.components?.Button?.textColor};
     transition: all 150ms ease;
     cursor: pointer;

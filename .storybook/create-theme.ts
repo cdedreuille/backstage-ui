@@ -9,6 +9,7 @@ interface ButtonProps {
   textColor?: string;
   sizeSmall?: string;
   sizeMedium?: string;
+  borderRadius?: string;
 }
 
 interface CustomThemeOptions extends MUIThemeOptions {
@@ -27,6 +28,7 @@ export function createTheme(options: CustomThemeOptions = {}): Theme {
         textColor: '#000',
         sizeSmall: '32px',
         sizeMedium: '48px',
+        borderRadius: '9999px',
         ...options.components?.Button,
       },
     },

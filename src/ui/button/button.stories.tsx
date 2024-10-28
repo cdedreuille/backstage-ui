@@ -47,6 +47,7 @@ const customTheme = createTheme({
     Button: {
       backgroundColor: 'blue',
       textColor: 'white',
+      borderRadius: '8px',
     },
   },
 });
