@@ -21,9 +21,9 @@ This version is using MUI System + Base UI. While this version is working well, 
 In this new version we are exploring how to leverage Emotion theming system directly and Base UI.
 
 ### What we are using
-- `@emotion/react` for our the theming system
-- `@mui/system` or `@mui/material` for layout components until they deprecate them
+- `@emotion/react` for our the theming system.
 - `@mui/base` as unstyled components to insure we have a solid accessible foundation.
+- `@mui/system` or `@mui/material` for layout components until they deprecate them.
 
 ### Pros & Cons
 
@@ -38,6 +38,7 @@ Since future versions of MUI will be quite a departure from the current theming 
 ### What we are using
 - `CSS variables` to set the theme, bypassing the need for a ThemeProvider.
 - `@mui/base` as unstyled components to insure we have a solid accessible foundation.
+- `@mui/system` or `@mui/material` for layout components until they deprecate them.
 
 ### Pros & Cons
 
