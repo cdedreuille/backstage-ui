@@ -3,16 +3,27 @@ import {
   ThemeOptions as MUIThemeOptions,
   Theme,
 } from '@mui/system';
+import { defaultLightTheme } from './theme';
 
 interface ButtonProps {
-  backgroundColor?: string;
-  backgroundColorHover?: string;
-  backgroundColorActive?: string;
-  backgroundColorDisabled?: string;
-  textColor?: string;
+  primaryBackgroundColor?: string;
+  primaryBackgroundColorHover?: string;
+  primaryBackgroundColorActive?: string;
+  primaryBorderColor?: string;
+  primaryBorderColorHover?: string;
+  primaryBorderColorActive?: string;
+  primaryTextColor?: string;
+  primaryBorderRadius?: string;
+  secondaryBackgroundColor?: string;
+  secondaryBackgroundColorHover?: string;
+  secondaryBackgroundColorActive?: string;
+  secondaryBorderColor?: string;
+  secondaryBorderColorHover?: string;
+  secondaryBorderColorActive?: string;
+  secondaryTextColor?: string;
+  secondaryBorderRadius?: string;
   sizeSmall?: string;
   sizeMedium?: string;
-  borderRadius?: string;
 }
 
 interface CustomThemeOptions extends MUIThemeOptions {
@@ -24,14 +35,11 @@ interface CustomThemeOptions extends MUIThemeOptions {
 export function createTheme(options: CustomThemeOptions = {}): Theme {
   // Merge the button component options with defaults
   const mergedOptions = {
+    ...defaultLightTheme,
     ...options,
     components: {
       Button: {
-        backgroundColor: '#1ED760',
-        textColor: '#000',
-        sizeSmall: '32px',
-        sizeMedium: '48px',
-        borderRadius: '9999px',
+        ...defaultLightTheme.components?.Button,
         ...options.components?.Button,
       },
     },

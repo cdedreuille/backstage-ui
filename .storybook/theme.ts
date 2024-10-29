@@ -1,9 +1,8 @@
-import { ThemeOptions as MUIThemeOptions, Theme } from '@mui/system';
 import { createTheme } from './create-theme';
 
-export const lightTheme = createTheme({
+export const defaultLightTheme = {
   palette: {
-    mode: 'dark',
+    mode: 'light',
     primary: '#1ED760',
     background: {
       default: '#fff',
@@ -11,10 +10,22 @@ export const lightTheme = createTheme({
   },
   components: {
     Button: {
-      backgroundColor: '#1ED760',
-      backgroundColorHover: '#3BE477',
-      backgroundColorActive: '#1ABC54',
-      textColor: '#000',
+      primaryBackgroundColor: '#1ED760',
+      primaryBackgroundColorHover: '#3BE477',
+      primaryBackgroundColorActive: '#1ABC54',
+      primaryBorderColor: '#1ED760',
+      primaryBorderColorHover: '#3BE477',
+      primaryBorderColorActive: '#1ABC54',
+      primaryTextColor: '#000',
+      primaryBorderRadius: '9999px',
+      secondaryBackgroundColor: 'transparent',
+      secondaryBackgroundColorHover: 'transparent',
+      secondaryBackgroundColorActive: 'rgba(0, 0, 0, 0.03)',
+      secondaryBorderColor: '#000',
+      secondaryBorderColorHover: '#000',
+      secondaryBorderColorActive: '#000',
+      secondaryTextColor: '#000',
+      secondaryBorderRadius: '9999px',
       sizeSmall: '32px',
       sizeMedium: '48px',
     },
@@ -28,7 +39,9 @@ export const lightTheme = createTheme({
       xl: 1536,
     },
   },
-});
+};
+
+export const lightTheme = createTheme(defaultLightTheme);
 
 export const darkTheme = createTheme({
   palette: {
@@ -40,10 +53,22 @@ export const darkTheme = createTheme({
   },
   components: {
     Button: {
-      backgroundColor: '#1ED760',
-      backgroundColorHover: '#3BE477',
-      backgroundColorActive: '#1ABC54',
-      textColor: '#000',
+      primaryBackgroundColor: '#1ED760',
+      primaryBackgroundColorHover: '#3BE477',
+      primaryBackgroundColorActive: '#1ABC54',
+      primaryBorderColor: '#1ED760',
+      primaryBorderColorHover: '#3BE477',
+      primaryBorderColorActive: '#1ABC54',
+      primaryTextColor: '#000',
+      primaryBorderRadius: '9999px',
+      secondaryBackgroundColor: 'transparent',
+      secondaryBackgroundColorHover: 'transparent',
+      secondaryBackgroundColorActive: 'rgba(255, 255, 255, 0.1)',
+      secondaryBorderColor: '#fff',
+      secondaryBorderColorHover: '#fff',
+      secondaryBorderColorActive: '#fff',
+      secondaryTextColor: '#fff',
+      secondaryBorderRadius: '9999px',
       sizeSmall: '32px',
       sizeMedium: '48px',
     },

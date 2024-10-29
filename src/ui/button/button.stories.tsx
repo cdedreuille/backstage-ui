@@ -26,7 +26,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    children: 'Button',
+    children: 'Primary button',
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    children: 'Secondary button',
+    variant: 'secondary',
   },
 };
 
@@ -52,9 +59,10 @@ export const Disabled: Story = {
 const customTheme = createTheme({
   components: {
     Button: {
-      backgroundColor: 'blue',
-      textColor: 'white',
-      borderRadius: '8px',
+      primaryBackgroundColor: 'blue',
+      primaryBorderColor: 'blue',
+      primaryTextColor: 'white',
+      primaryBorderRadius: '8px',
     },
   },
 });
