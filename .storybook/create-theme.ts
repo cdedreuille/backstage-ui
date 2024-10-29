@@ -6,6 +6,9 @@ import {
 
 interface ButtonProps {
   backgroundColor?: string;
+  backgroundColorHover?: string;
+  backgroundColorActive?: string;
+  backgroundColorDisabled?: string;
   textColor?: string;
   sizeSmall?: string;
   sizeMedium?: string;

@@ -42,6 +42,13 @@ export const Sizes: Story = {
   ),
 };
 
+export const Disabled: Story = {
+  args: {
+    children: 'Button',
+    disabled: true,
+  },
+};
+
 const customTheme = createTheme({
   components: {
     Button: {

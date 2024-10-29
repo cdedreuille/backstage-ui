@@ -6,7 +6,8 @@ interface ButtonProps {
 }
 
 export const Button = styled(BaseButton)<ButtonProps>(
-  ({ theme, size = 'medium' }) => `
+  ({ theme, size = 'medium', disabled }) => `
+    user-select: none;
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 600;
     font-size: 0.875rem;
@@ -23,17 +24,21 @@ export const Button = styled(BaseButton)<ButtonProps>(
     border-radius: ${theme.components?.Button?.borderRadius};
     color: ${theme.components?.Button?.textColor};
     transition: all 150ms ease;
-    cursor: pointer;
+    cursor: ${disabled ? 'not-allowed' : 'pointer'};
     border: 1px solid ${theme.components?.Button?.backgroundColor};
+    opacity: ${disabled ? 0.3 : 1};
 
     &:hover {
-      background-color: ${theme.components?.Button?.backgroundColor};
+      background-color: ${
+        disabled
+          ? theme.components?.Button?.backgroundColor
+          : theme.components?.Button?.backgroundColorHover
+      };
     }
 
     &.${buttonClasses.active} {
-      background-color: ${theme.components?.Button?.backgroundColor};
+      background-color: ${theme.components?.Button?.backgroundColorActive};
       box-shadow: none;
-      transform: scale(0.99);
     }
   `
 );
