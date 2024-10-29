@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './button';
-import { Stack, ThemeProvider } from '@mui/system';
+import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '../../.storybook/create-theme';
 
 const meta = {
@@ -43,10 +43,10 @@ export const Sizes: Story = {
     children: 'Button',
   },
   render: (args) => (
-    <Stack direction="row" alignItems="center" spacing={2}>
+    <div style={{ display: 'flex', gap: '10px' }}>
       <Button {...args} size="small" />
       <Button {...args} size="medium" />
-    </Stack>
+    </div>
   ),
 };
 

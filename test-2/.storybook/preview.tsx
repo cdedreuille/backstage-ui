@@ -1,5 +1,5 @@
 import React from 'react';
-import { GlobalStyles, ThemeProvider } from '@mui/system';
+import { ThemeProvider } from '@emotion/react';
 import type { Preview, ReactRenderer } from '@storybook/react';
 import { lightTheme, darkTheme } from './theme';
 import { withThemeFromJSXProvider } from '@storybook/addon-themes';
@@ -24,7 +24,6 @@ const preview: Preview = {
       },
       defaultTheme: 'light',
       Provider: ThemeProvider,
-      GlobalStyles: GlobalStyles,
     }),
     (Story, context) => {
       const theme = context.globals.theme || 'light';

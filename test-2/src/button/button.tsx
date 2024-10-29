@@ -1,5 +1,5 @@
 import { Button as BaseButton, buttonClasses } from '@mui/base/Button';
-import { styled } from '@mui/system';
+import styled from '@emotion/styled';
 
 interface ButtonProps {
   size?: 'small' | 'medium';
@@ -15,7 +15,7 @@ export const Button = styled(BaseButton)<ButtonProps>(
     line-height: 1.5;
     background-color: ${
       variant === 'primary'
-        ? theme.components?.Button?.primaryBackgroundColor
+        ? theme.components.Button.primaryBackgroundColor
         : 'transparent'
     };
     padding: 0;
@@ -23,21 +23,21 @@ export const Button = styled(BaseButton)<ButtonProps>(
     padding-right: ${size === 'small' ? '16px' : '32px'};
     height: ${
       size === 'small'
-        ? theme.components?.Button?.sizeSmall
-        : theme.components?.Button?.sizeMedium
+        ? theme.components.Button.sizeSmall
+        : theme.components.Button.sizeMedium
     };
-    border-radius: ${theme.components?.Button?.primaryBorderRadius};
+    border-radius: ${theme.components.Button.primaryBorderRadius};
     color: ${
       variant === 'primary'
-        ? theme.components?.Button?.primaryTextColor
-        : theme.components?.Button?.secondaryTextColor
+        ? theme.components.Button.primaryTextColor
+        : theme.components.Button.secondaryTextColor
     };
     transition: all 150ms ease;
     cursor: ${disabled ? 'not-allowed' : 'pointer'};
     border: 1px solid ${
       variant === 'primary'
-        ? theme.components?.Button?.primaryBorderColor
-        : theme.components?.Button?.secondaryBorderColor
+        ? theme.components.Button.primaryBorderColor
+        : theme.components.Button.secondaryBorderColor
     };
     opacity: ${disabled ? 0.3 : 1};
 
@@ -45,28 +45,28 @@ export const Button = styled(BaseButton)<ButtonProps>(
       background-color: ${
         disabled
           ? variant === 'primary'
-            ? theme.components?.Button?.primaryBackgroundColor
-            : theme.components?.Button?.secondaryBackgroundColor
+            ? theme.components.Button.primaryBackgroundColor
+            : theme.components.Button.secondaryBackgroundColor
           : variant === 'primary'
-          ? theme.components?.Button?.primaryBackgroundColorHover
-          : theme.components?.Button?.secondaryBackgroundColorHover
+          ? theme.components.Button.primaryBackgroundColorHover
+          : theme.components.Button.secondaryBackgroundColorHover
       };
       border-color: ${
         disabled
           ? variant === 'primary'
-            ? theme.components?.Button?.primaryBorderColor
-            : theme.components?.Button?.secondaryBorderColor
+            ? theme.components.Button.primaryBorderColor
+            : theme.components.Button.secondaryBorderColor
           : variant === 'primary'
-          ? theme.components?.Button?.primaryBorderColorHover
-          : theme.components?.Button?.secondaryBorderColorHover
+          ? theme.components.Button.primaryBorderColorHover
+          : theme.components.Button.secondaryBorderColorHover
       };
     }
 
     &.${buttonClasses.active} {
       background-color: ${
         variant === 'primary'
-          ? theme.components?.Button?.primaryBackgroundColorActive
-          : theme.components?.Button?.secondaryBackgroundColorActive
+          ? theme.components.Button.primaryBackgroundColorActive
+          : theme.components.Button.secondaryBackgroundColorActive
       };
       box-shadow: none;
     }
