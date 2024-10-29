@@ -45,4 +45,4 @@ Since future versions of MUI will be quite a departure from the current theming 
 - 👍 It is as fast as it can. No compromise, flexible and very stable.
 - 👍 It's extremelly extensible with a mix of set values + classnames in case they want to go further.
 - 👍 With Base UI, we can build components the way we want with a solid base.
-- ❌ Backstage is heavily using layout components like `Box`, `Stack`, `Container`, etc. We would probably have to fork them from MUI.
+- 🤌 We have to keep layout components for now as they are pretty much used everywhere. We should think about creating our own layout components.
