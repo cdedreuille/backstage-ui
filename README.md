@@ -22,13 +22,14 @@ In this new version we are exploring how to leverage Emotion theming system dire
 
 ### What we are using
 - `@emotion/react` for our the theming system
+- `@mui/system` or `@mui/material` for layout components until they deprecate them
 - `@mui/base` as unstyled components to insure we have a solid accessible foundation.
 
 ### Pros & Cons
 
 - 👍 Since MUI is using Emotion under the hood, we are using it directly and build our theme system on top of it.
 - 👍 With Base UI, we can build components the way we want with a solid base.
-- ❌ Backstage is heavily using layout components like `Box`, `Stack`, `Container`, etc. We would probably have to fork them from MUI.
+- 🤌 We have to keep layout components for now as they are pretty much used everywhere. We should think about creating our own layout components.
 
 # Test 3 (Not yet explored)
 
