@@ -1,11 +1,6 @@
 import styled from '@emotion/styled';
 import { Input as TextFieldPrimitive } from '@mui/base/Input';
 
-interface ButtonProps {
-  size?: 'small' | 'medium';
-  variant?: 'primary' | 'secondary';
-}
-
 export const Input = styled(TextFieldPrimitive)`
   border: 1px solid #ccc;
   border-radius: 4px;
