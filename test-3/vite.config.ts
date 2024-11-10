@@ -1,21 +1,34 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
-import dts from 'vite-plugin-dts';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
+import dts from 'vite-plugin-dts';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), dts(), vanillaExtractPlugin()],
+  plugins: [
+    react(),
+    dts({ exclude: ['**/*.stories.ts', '**/*.stories.tsx', '**/*.css.ts'] }),
+    vanillaExtractPlugin(),
+  ],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
       name: 'backstage-ui',
       formats: ['es'],
-      fileName: 'backstage-ui',
+      fileName: 'main',
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime'],
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
+        preserveModules: true,
+        preserveModulesRoot: 'src',
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].js',
+      },
     },
   },
 });
