@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
   render: () => (
-    <box.div padding="medium" background="blue-50">
+    <box.div padding="medium" background="background">
       Basic Box
     </box.div>
   ),
@@ -26,7 +26,7 @@ export const Responsive: Story = {
     <box.div
       display={{ xs: 'block', sm: 'flex' }}
       padding={{ xs: 'small', sm: 'medium', lg: 'large' }}
-      background="blue-100"
+      background="background"
     >
       Responsive Box
     </box.div>
@@ -39,15 +39,15 @@ export const FlexContainer: Story = {
       display="flex"
       flexDirection="column"
       padding="large"
-      background="blue-50"
+      background="background"
     >
-      <box.div padding="medium" background="blue-100">
+      <box.div padding="medium" background="background">
         Item 1
       </box.div>
-      <box.div padding="medium" background="blue-200">
+      <box.div padding="medium" background="background">
         Item 2
       </box.div>
-      <box.div padding="medium" background="blue-100">
+      <box.div padding="medium" background="background">
         Item 3
       </box.div>
     </box.div>
@@ -56,24 +56,24 @@ export const FlexContainer: Story = {
 
 export const Nested: Story = {
   render: () => (
-    <box.section padding="large" background="blue-50">
-      <box.header padding="medium" background="blue-100">
+    <box.section padding="large" background="background">
+      <box.header padding="medium" background="background">
         Header
       </box.header>
       <box.main
         display="flex"
         padding="medium"
-        background="blue-200"
+        background="background"
         justifyContent="space-between"
       >
-        <box.aside padding="small" background="blue-100">
+        <box.aside padding="small" background="background">
           Sidebar
         </box.aside>
-        <box.article padding="small" background="blue-100">
+        <box.article padding="small" background="background">
           Main Content
         </box.article>
       </box.main>
-      <box.footer padding="medium" background="blue-100">
+      <box.footer padding="medium" background="background">
         Footer
       </box.footer>
     </box.section>
@@ -85,12 +85,12 @@ export const Alignment: Story = {
     <box.div
       display="flex"
       padding="large"
-      background="blue-50"
+      background="background"
       justifyContent="center"
       alignItems="center"
       style={{ height: '200px' }}
     >
-      <box.div padding="medium" background="blue-100">
+      <box.div padding="medium" background="background">
         Centered Content
       </box.div>
     </box.div>
@@ -101,16 +101,16 @@ export const Alignment: Story = {
 export const Spacing: Story = {
   render: () => (
     <box.div display="flex" flexDirection="column" gap="medium">
-      <box.div padding="small" background="blue-50">
+      <box.div padding="small" background="background">
         Small Padding
       </box.div>
-      <box.div padding="medium" background="blue-100">
+      <box.div padding="medium" background="background">
         Medium Padding
       </box.div>
-      <box.div padding="large" background="blue-200">
+      <box.div padding="large" background="background">
         Large Padding
       </box.div>
-      <box.div paddingX="large" paddingY="small" background="blue-100">
+      <box.div paddingX="large" paddingY="small" background="background">
         Mixed Padding
       </box.div>
     </box.div>
@@ -121,13 +121,13 @@ export const Spacing: Story = {
 export const DisplayVariants: Story = {
   render: () => (
     <box.div display="flex" flexDirection="column" gap="medium">
-      <box.div padding="medium" background="blue-50" display="block">
+      <box.div padding="medium" background="background" display="block">
         Display Block
       </box.div>
-      <box.div padding="medium" background="blue-100" display="flex">
+      <box.div padding="medium" background="background" display="flex">
         Display Flex
       </box.div>
-      <box.span padding="medium" background="blue-200" display="inline">
+      <box.span padding="medium" background="background" display="inline">
         Display Inline
       </box.span>
     </box.div>

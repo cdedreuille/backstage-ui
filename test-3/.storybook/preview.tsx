@@ -3,6 +3,7 @@ import type { Preview, ReactRenderer } from '@storybook/react';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 
 import '../src/styles.css';
+import { themeClass } from '../src/theme/theme.css';
 
 const preview: Preview = {
   parameters: {
@@ -35,7 +36,11 @@ const preview: Preview = {
         (element as HTMLElement).style.backgroundColor = backgroundColor;
       });
 
-      return <Story />;
+      return (
+        <div className={themeClass}>
+          <Story />
+        </div>
+      );
     },
   ],
 };

@@ -1,5 +1,6 @@
 import { createElement } from 'react';
-import { sprinkles, Sprinkles, base } from './box.css.ts';
+import { sprinkles, Sprinkles } from '../../theme/sprinkles.css';
+import { base } from './box.css';
 
 type HTMLProperties = Omit<
   React.AllHTMLAttributes<HTMLElement>,
