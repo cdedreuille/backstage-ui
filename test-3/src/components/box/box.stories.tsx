@@ -133,3 +133,7 @@ export const DisplayVariants: Story = {
     </box.div>
   ),
 };
+
+export const Test: Story = {
+  render: () => <box.div paddingX="large">Hello World</box.div>,
+};
