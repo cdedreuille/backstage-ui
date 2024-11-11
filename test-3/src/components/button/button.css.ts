@@ -1,10 +1,21 @@
 import { recipe } from '@vanilla-extract/recipes';
+import { createTheme } from '@vanilla-extract/css';
+
+export const [themeClass, vars] = createTheme({
+  color: {
+    text: 'blue',
+    background: 'blue',
+  },
+  font: {
+    body: 'arial',
+  },
+});
 
 export const button = recipe({
   base: {
     all: 'unset',
     userSelect: 'none',
-    fontFamily: 'IBM Plex Sans, sans-serif',
+    fontFamily: 'var(--font-regular)',
     fontWeight: 600,
     fontSize: '0.875rem',
     lineHeight: '1.5',
