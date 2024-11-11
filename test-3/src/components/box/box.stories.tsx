@@ -24,8 +24,8 @@ export const Basic: Story = {
 export const Responsive: Story = {
   render: () => (
     <box.div
-      display={{ mobile: 'block', desktop: 'flex' }}
-      padding={{ mobile: 'small', tablet: 'medium', desktop: 'large' }}
+      display={{ xs: 'block', sm: 'flex' }}
+      padding={{ xs: 'small', sm: 'medium', lg: 'large' }}
       background="blue-100"
     >
       Responsive Box

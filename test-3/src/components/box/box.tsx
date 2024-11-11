@@ -1,6 +1,5 @@
 import { createElement } from 'react';
-import { sprinkles, Sprinkles } from '../../sprinkles.css';
-import { box as boxStyle } from './box.css.ts';
+import { sprinkles, Sprinkles, base } from './box.css.ts';
 
 type HTMLProperties = Omit<
   React.AllHTMLAttributes<HTMLElement>,
@@ -28,7 +27,7 @@ const createBox = (element: keyof JSX.IntrinsicElements) => {
     const sprinklesClassName = sprinkles(sprinklesProps);
 
     return createElement(element, {
-      className: [boxStyle, sprinklesClassName, className]
+      className: [base, sprinklesClassName, className]
         .filter(Boolean)
         .join(' '),
       style,
